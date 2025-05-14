@@ -1,2 +1,2 @@
 # Human-Activity-Detection
-My Human Acttivity Detection Data Science Project based on real data from Smartphone Sensors
+My Human Acttivity Detection Data Science Project based on real data from Smartphone Sensors. The model I used is Random Forest Classifier with hyper-parameters to avoid overfitting. The model generalized well on data unseen before by subjects that were left out of the training process. Beacuse the model is tree-based, I did not need scaling or encoding. I dropped highly correlated features to remove noise, which improved metrics on test data.
