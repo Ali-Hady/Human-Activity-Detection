@@ -1,2 +1,9 @@
 # Human-Activity-Detection
 My Human Acttivity Detection Data Science Project based on real data from Smartphone Sensors. The model I used is Random Forest Classifier with hyper-parameters to avoid overfitting. The model generalized well on data unseen before by subjects that were left out of the training process. Beacuse the model is tree-based, I did not need feature scaling. I dropped highly correlated features to remove noise, which improved metrics on test data.
+
+## Insights
+- Feature importances graph shows us the most influential signals.
+- We notice that phone orientation is the most important in determining possible movements. This is suggested by the presence of the three angles measured between the three body axes (X, Y and Z) and gravity vector in the top 10 features, with orientation relative to X-axis being the most important of all features.
+- Frequencies of acceleration indicate possible patterns of movement, for example, low frequency of acceleration signals indicate slow movements, while higher frequencies indicate faster (or more intense) movements. This is highlighted in the top ten features.
+- Gravity Acceleration along the y-axis appears to be a very useful feature, which is logical if we want to determine upstair and downstair movements. The jerk signal determines sudden change in acceleration, which is useful in more intense movement patterns.
+- There are other less important features that are also among the top ten features, including entropy of acceleration along the X-axis, where overall randomness of the acceleration signal in some directions may be a good indicator of certain movement patterns. Correlation between X and Y acceleration is also a good indicator of certain movements, for example walking vs going upstairs.
